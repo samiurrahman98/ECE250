@@ -1,0 +1,109 @@
+new: 5
+capacity 5
+delete
+
+new
+capacity 10
+push 1
+push 2
+push 3
+push 4
+push 5
+size 5
+capacity 10
+push 6
+push 7
+push 8
+push 9
+push 10
+size 10
+capacity 10
+push 11
+size 11
+capacity 20
+push 12
+size 12
+pop 12
+pop 11
+pop 10
+size 9
+capacity 20
+empty 0
+clear
+size 0
+capacity 10
+empty 1
+top!
+pop!
+delete
+
+new: 3
+pop!
+capacity 3
+size 0
+push -2
+push -2
+push -3
+push -5
+capacity 6
+size 4
+pop -5
+pop -3
+pop -2
+pop -2
+pop!
+capacity 6
+size 0
+clear
+capacity 3
+size 0
+delete
+
+new: -2
+capacity 1
+size 0
+push 222
+push 240
+top 240
+pop 240
+top 222
+pop 222
+capacity 2
+size 0
+clear
+capacity 1
+size 0
+delete
+
+new: 2
+push 2
+push 2
+push 4
+push 4
+push 8
+push 8
+push 8
+push 8
+push 16
+capacity 16
+size 9
+pop 16
+pop 8
+pop 8
+pop 8
+pop 8
+pop 4
+capacity 16
+size 3
+delete
+
+new: 10000
+empty 1
+push 1337
+empty 0
+size 1
+clear
+capacity 10000
+delete
+
+summary
