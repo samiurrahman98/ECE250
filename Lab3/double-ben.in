@@ -1,0 +1,100 @@
+// Ben C-K's P3 double test case
+
+// Test the basics
+new
+empty 1
+size 0
+npl -1
+top!
+
+push 1.2
+top 1.2
+empty 0
+size 1
+npl 0
+count 1.2 1
+
+pop 1.2
+pop!
+top!
+empty 1
+size 0
+npl -1
+
+clear
+empty 1
+size 0
+npl -1
+
+delete
+memory 0
+
+// Just test some other stuff, I guess
+new
+
+push 5.5
+push 4.3
+push 6.66
+size 3
+top 4.3
+npl 1
+empty 0
+
+push 8.1
+push 7.02
+pop 4.3
+size 4
+top 5.5
+npl 0
+
+push 10.3
+push 5.8
+push 6.9
+top 5.5
+npl 2
+
+push 8.1
+push 7.03
+push 3.4
+
+count 8.1 2
+count 7.02 1
+count 3.5 0
+
+top 3.4
+npl 0
+
+pop 3.4
+pop 5.5
+pop 5.8
+
+top 6.66
+empty 0
+size 7
+
+pop 6.66
+pop 6.9
+pop 7.02
+npl 1
+size 4
+
+clear
+empty 1
+size 0
+npl -1
+
+push 13.37
+empty 0
+size 1
+top 13.37
+pop 13.37
+pop!
+top!
+size 0
+empty 1
+npl -1
+
+delete
+memory 0
+
+summary

@@ -1,0 +1,38 @@
+new
+empty 1
+size 0
+npl -1
+push 3.5
+push 6.5
+push 9.5
+push 2.5
+push 5.5
+push 7.5
+push 11.5
+push 0.5
+push 4.5
+push 8.5
+push 10.5
+push 1.5
+push 3.5
+size 13
+npl 2
+pop 0.5
+pop 1.5
+pop 2.5
+pop 3.5
+pop 3.5
+pop 4.5
+pop 5.5
+pop 6.5
+pop 7.5
+pop 8.5
+pop 9.5
+pop 10.5
+pop 11.5
+top!
+empty 1
+npl -1
+size 0
+delete
+summary

@@ -1,0 +1,38 @@
+new
+empty 1
+size 0
+npl -1
+push 3
+push 6
+push 9
+push 2
+push 5
+push 7
+push 11
+push 0
+push 4
+push 8
+push 10
+push 1
+push 3
+size 13
+npl 2
+pop 0
+pop 1
+pop 2
+pop 3
+pop 3
+pop 4
+pop 5
+pop 6
+pop 7
+pop 8
+pop 9
+pop 10
+pop 11
+top!
+empty 1
+npl -1
+size 0
+delete
+summary

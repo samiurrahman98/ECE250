@@ -1,0 +1,206 @@
+// Ben C-K's P3 int test case
+
+// Test the basics
+new
+empty 1
+size 0
+npl -1
+top!
+
+push 1
+top 1
+empty 0
+size 1
+npl 0
+count 1 1
+
+pop 1
+pop!
+top!
+empty 1
+size 0
+npl -1
+
+clear
+empty 1
+size 0
+npl -1
+
+delete
+memory 0
+
+
+// Does push functionality work?
+
+new
+push 6
+push 4
+push 2
+push 0
+push 7
+push 5
+push 3
+push 1
+
+empty 0
+size 8
+npl 1
+top 0
+
+pop 0
+pop 1
+size 6
+npl 1
+top 2
+
+push 6
+push 4
+push 2
+push 7
+push 6
+count 2 2
+count 4 2
+count 6 3
+count 7 2
+size 11
+top 2
+npl 2
+
+pop 2
+top 2
+npl 2
+
+push 8
+push 8
+push 8
+push 9
+push 9
+push 9
+count 8 3
+count 9 3
+size 16
+top 2
+npl 3
+
+pop 2
+npl 2
+pop 3
+npl 2
+pop 4
+npl 1
+pop 4
+npl 2
+pop 5
+npl 2
+size 11
+
+empty 0
+clear
+empty 1
+size 0
+top!
+pop!
+npl -1
+
+push 5
+push 4
+push 6
+npl 1
+size 3
+empty 0
+
+pop 4
+pop 5
+pop 6
+pop!
+npl -1
+empty 1
+size 0
+
+delete
+memory 0
+
+
+// Let's test count and npl and stuff
+new
+push 10
+push 15
+push 12
+push 14
+push 16
+push 18
+
+push 12
+push 14
+push 16
+push 18
+top 10
+size 10
+empty 0
+
+push 20
+push 5
+push 15
+push 10
+push 12
+push 14
+push 16
+push 5
+push 20
+push 10
+top 5
+size 20
+empty 0
+
+count 5 2
+count 10 3
+count 12 3
+count 14 3
+count 15 2
+count 16 3
+count 18 2
+count 20 2
+npl 2
+
+pop 5
+count 5 1
+pop 5
+count 5 0
+pop 10
+count 10 2
+pop 10
+count 10 1
+pop 10
+count 10 0
+
+top 12
+size 15
+empty 0
+
+pop 12
+npl 2
+pop 12
+count 12 1
+pop 12
+npl 2
+top 14
+
+pop 14
+count 14 2
+pop 14
+npl 2
+top 14
+size 10
+
+clear
+empty 1
+size 0
+npl -1
+top!
+
+
+delete
+memory 0
+
+
+summary
