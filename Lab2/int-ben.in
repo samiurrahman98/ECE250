@@ -1,0 +1,266 @@
+// Ben C-K's P2 int test case
+// Put in prints wherever you want
+
+
+// Basic functions
+new
+size 0
+capacity 32
+
+insert 1
+bin 1 1
+size 1
+
+member 0 0
+member 1 1
+remove 0 0
+remove 1 1
+
+size 0
+clear
+size 0
+delete
+summary
+
+
+
+// Constructor, insertion, and deletion edge cases
+new: 0
+size 0
+capacity 1
+
+insert 1
+size 1
+insert!
+size 1
+
+remove 1 1
+size 0
+remove 1 0
+size 0
+capacity 1
+
+clear
+size 0
+delete
+summary
+
+
+
+// Hash functions
+new: 4
+capacity 16
+
+insert 1
+insert 2
+insert 4
+insert 8
+insert 16
+insert 32
+insert 64
+insert 128
+
+size 8
+member 1 1
+member 8 1
+member 12 0
+
+insert 256
+insert 512
+insert 1024
+insert 2048
+insert 4096
+insert 8192
+insert 16384
+insert 32768
+
+insert!
+size 16
+capacity 16
+
+bin 0 16
+bin 1 1
+bin 2 2
+bin 3 32
+bin 4 4
+bin 5 64
+bin 6 256
+bin 7 512
+bin 8 8
+bin 9 128
+bin 10 1024
+bin 11 2048
+bin 12 4096
+bin 13 8192
+bin 14 16384
+bin 15 32768
+
+remove 1 1
+size 15
+
+clear
+size 0
+delete
+summary
+
+
+
+// Negative ints
+new: 4
+capacity 16
+insert 2
+insert -382
+insert -4837
+
+bin 2 2
+bin 11 -382
+bin 14 -4837
+size 3
+
+member -382 1
+member 0 0
+remove 3 0
+remove 2 1
+size 2
+empty 0
+
+clear
+size 0
+empty 1
+delete
+summary
+
+
+
+// Deleting elements
+new: 3
+capacity 8
+
+insert 0
+insert 8
+insert 16
+insert 24
+size 4
+
+bin 0 0
+bin 1 8
+bin 3 16
+bin 6 24
+
+remove 1 0
+remove 8 1
+size 3
+
+member 0 1
+member 8 0
+member 16 1
+member 24 1
+
+insert 32
+bin 5 32
+remove 0 1
+member 32 1
+remove 32 1
+size 2
+
+delete
+summary
+
+
+
+// Filling up and emptying
+new: 2
+capacity 4
+size 0
+
+insert 8
+insert 13
+insert -29
+insert 6
+insert!
+size 4
+empty 0
+
+bin 0 8
+bin 1 13
+bin 2 6
+bin 3 -29
+
+remove 8 1
+remove 8 0
+member -29 1
+size 3
+empty 0
+
+insert 44
+insert!
+size 4
+empty 0
+
+remove 44 1
+remove 6 1
+remove 13 1
+remove -29 1
+size 0
+empty 1
+
+clear
+size 0
+empty 1
+
+insert 10
+size 1
+empty 0
+clear
+
+insert 69
+insert 420
+insert 666
+insert 1337
+insert!
+size 4
+
+delete
+summary
+
+
+
+// Extreme values
+new: 8
+size 0
+capacity 256
+insert 0
+insert 256
+insert -256
+size 3
+
+insert 195729440
+insert 145506336
+insert -13508255
+size 6
+capacity 256
+
+bin 0 0
+bin 1 256
+bin 32 195729440
+bin 68 -13508255
+bin 97 145506336
+bin 255 -256
+
+remove 195729440 1
+member -13508255 1
+
+clear
+size 0
+insert 0
+bin 0 0
+size 1
+
+delete
+summary
+
+
+
+// Memory check
+memory 0
+details

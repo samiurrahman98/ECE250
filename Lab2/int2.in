@@ -1,0 +1,18 @@
+new: 3
+insert 0
+insert 8
+insert 16
+insert 32
+insert 64
+insert 128
+bin 0 0
+bin 1 8
+bin 2 64
+bin 3 16
+bin 4 128
+bin 5 32
+size 6
+capacity 8
+print
+delete
+summary

@@ -1,0 +1,217 @@
+// Ben C-K's P2 double test case
+// Put in prints wherever you want
+
+
+// Basic functions
+new
+size 0
+capacity 32
+empty 1
+
+insert 1.1
+bin 1 1.1
+size 1
+empty 0
+
+member 1.0 0
+member 1.1 1
+remove 1.11 0
+remove 1.1 1
+
+size 0
+empty 1
+clear
+empty 1
+
+size 0
+delete
+summary
+
+
+
+// Constructor, insertion, and deletion edge cases
+new: 0
+size 0
+capacity 1
+
+insert 1.0
+size 1
+insert!
+size 1
+
+remove 1.0 1
+size 0
+remove 1.0 0
+size 0
+capacity 1
+
+clear
+size 0
+delete
+summary
+
+
+
+// Hash functions and negatives
+new: 3
+capacity 8
+
+insert 280.03
+insert -39592.29
+insert 924.667
+insert 1104.39849
+insert -10.00091
+insert 23456.69
+
+bin 0 280.03
+bin 2 23456.69
+bin 3 -39592.29
+bin 4 924.667
+bin 5 -10.00091
+bin 6 1104.39849
+size 6
+
+remove -10.0 0
+remove -10.00091 1
+remove -10.00091 0
+member -10.00091 0
+member 280.03 1
+member 924.667 1
+member 23456.69 1
+size 5
+empty 0
+
+insert 124.222
+insert 420.0
+insert 299.08
+insert!
+
+bin 0 280.03
+bin 1 124.222
+bin 2 23456.69
+bin 3 -39592.29
+bin 4 924.667
+bin 5 420
+bin 6 1104.39849
+bin 7 299.08
+size 8
+empty 0
+
+remove 280.03 1
+remove 279.97 0
+size 7
+
+insert -0.01
+insert!
+bin 0 -0.01
+size 8
+
+clear
+size 0
+empty 1
+delete
+summary
+
+
+
+// Rounding and deleting
+new: 2
+capacity 4
+
+insert 19.999999999
+insert -4.00000001
+insert 28016.999
+insert -3.14
+
+bin 0 -4.00000001
+bin 1 28016.999
+bin 2 -3.14
+bin 3 19.999999999
+size 4
+empty 0
+
+member -4.00000001 1
+member -4 0
+member 19.999999999 1
+member 20 0
+member 28016.999 1
+member 28017 0
+member -3.14 1
+member -3.1 0
+
+insert!
+size 4
+
+remove 20 0
+remove 19.999999999 1
+remove -4.00000001 1
+remove -3.14 1
+remove 28016.999 1
+size 0
+empty 1
+
+insert 20
+member 20 1
+size 1
+empty 0
+
+clear
+size 0
+empty 1
+
+delete
+summary
+
+
+
+// Extreme values
+new: 7
+size 0
+capacity 128
+
+insert 37373737.37
+insert 72873.98
+insert -9449246.002
+insert 100004869.99999997
+
+size 4
+empty 0
+
+bin 5 -9449246.002
+bin 41 37373737.37
+bin 98 72873.98
+bin 110 100004869.99999997
+
+member 72873.98 1
+member 100004869.99999997 1
+member 100005000 0
+remove 100004869.99999997 1
+remove 100004869.99999997 0
+size 3
+
+insert -128.00001
+bin 0 -128.00001
+size 4
+empty 0
+
+clear
+size 0
+empty 1
+insert 0.05
+size 1
+empty 0
+remove 0.05 1
+remove 0.05 0
+size 0
+empty 1
+clear
+size 0
+
+delete
+summary
+
+
+
+// Memory check
+memory 0
+details

@@ -1,0 +1,12 @@
+new
+insert 31.5
+insert 191.5
+bin 31 31.5
+bin 4 191.5
+insert 159.5
+bin 9 159.5
+remove 111.5 0
+remove 159.5 1
+member 159.5 0
+size 2
+delete
